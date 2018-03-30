@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/main.scss';
-import App from './App';
+import Main from './main';
 import registerServiceWorker from './registerServiceWorker';
 
 
-ReactDOM.render(<App />, document.getElementById('app-root'));
+ReactDOM.render(<Main />, document.getElementById('app-root'));
 registerServiceWorker();

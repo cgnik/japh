@@ -4,7 +4,9 @@ const port = process.env.PORT || 3000;
 
 app.listen(port);
 app.use(express.static('static'))
-app.route('/function')
-   .get((req, resp) => resp.json({something: "grand"}));
+app.route('/analysis')
+   .get((req, resp) => resp.json([
+      {name: "Add", description: "sum the values"},
+      {name: "Subtract", description: "subtract the values from first to last"}
+   ]));
 
-console.log('todo list RESTful API server started on: ' + port);
