@@ -10,6 +10,6 @@
     "express": "^4.16.3"
   },
   "scripts": {
-    "dev": "PORT=3001 nodemon server.js"
+    "dev-server": "nodemon server.js"
   }
 }
