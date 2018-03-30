@@ -38,7 +38,6 @@ class Main extends Component {
 
    render() {
       const valid = this.isValid();
-      console.log('valid: ', valid);
       return (
          <div className="Main">
             <Row>
