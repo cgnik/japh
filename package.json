@@ -1,0 +1,15 @@
+{
+  "name": "Japh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.17.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "dev": "PORT=3001 nodemon server.js"
+  }
+}
