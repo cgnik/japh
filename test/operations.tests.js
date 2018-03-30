@@ -15,6 +15,6 @@ describe('#add', () => {
       ops.add([0, 0]).should.equal(0);
    });
    it('should tolerate non-numeric values', () => {
-      ops.add(['a', 1]).should.equal(1);
+      ops.add(['aba', 1]).should.equal(1);
    })
 });
