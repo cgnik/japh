@@ -34,11 +34,18 @@ describe('operations', () => {
       });
    });
    describe('#subtract', () => {
-      it('should return 0 for null or odd input', () => {
+      it('should tolerate non-numeric values', () => {
          ops.subtract({}).should.equal(0);
          ops.subtract().should.equal(0);
          ops.subtract(null).should.equal(0);
          ops.subtract("bobby").should.equal(0);
+      });
+      it('should subtract the values', () => {
+         ops.subtract([1, 2]).should.equal(-1);
+         ops.subtract([1.004, 2]).should.equal(-0.996);
+         ops.subtract([47.0, 1.004, 2]).should.equal(43.996);
+         ops.subtract([]).should.equal(0);
+         ops.subtract([0, 0]).should.equal(0);
       });
    });
 });
