@@ -1,4 +1,5 @@
-const sinon = require('sinon');
-const chai = require('chai');
+global.sinon = require('sinon');
+global.chai = require('chai');
 
-const should = chai.should();
+global.should = global.chai.should();
+global.expect = global.chai.expect;
