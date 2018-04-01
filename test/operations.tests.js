@@ -110,7 +110,6 @@ describe('operations', () => {
          ops.multiply([1, 2]).should.equal(2);
          ops.multiply([1.004, 2]).should.equal(2);
          ops.multiply([47.0, 1.004, 2]).should.equal(94.4);
-         ops.multiply([]0).should.equal(0);
          ops.multiply([0, 0]).should.equal(0);
          ops.multiply([300, 0]).should.equal(0);
          ops.multiply([40, 300, 0]).should.equal(0);
@@ -126,8 +125,7 @@ describe('operations', () => {
       it('should give a quotient of the values', () => {
          ops.divide([1, 2]).should.equal(0.5);
          ops.divide([1.004, 2]).should.equal(0.5);
-         ops.divide([47.0, 1.004, 2]).should.equal(0);
-         ops.divide([]).should.equal(0);
+         ops.divide([47.0, 1.004, 2]).should.equal(23.4);
       });
       it('should throw on 0 in array', () => {
          expect(ops.divide.bind([0, 0])).to.throw();
