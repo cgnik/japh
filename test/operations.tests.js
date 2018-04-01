@@ -108,9 +108,9 @@ describe('operations', () => {
    describe('#multiply', () => {
       it('should give a product of the values', () => {
          ops.multiply([1, 2]).should.equal(2);
-         ops.multiply([1.004, 2]).should.equal(2.008);
-         ops.multiply([47.0, 1.004, 2]).should.equal(94.376);
-         ops.multiply([]).should.equal(0);
+         ops.multiply([1.004, 2]).should.equal(2);
+         ops.multiply([47.0, 1.004, 2]).should.equal(94.4);
+         ops.multiply([]0).should.equal(0);
          ops.multiply([0, 0]).should.equal(0);
          ops.multiply([300, 0]).should.equal(0);
          ops.multiply([40, 300, 0]).should.equal(0);
@@ -125,8 +125,8 @@ describe('operations', () => {
    describe('#divide', () => {
       it('should give a quotient of the values', () => {
          ops.divide([1, 2]).should.equal(0.5);
-         ops.divide([1.004, 2]).should.equal(0.502);
-         ops.divide([47.0, 1.004, 2]).should.equal(20);
+         ops.divide([1.004, 2]).should.equal(0.5);
+         ops.divide([47.0, 1.004, 2]).should.equal(0);
          ops.divide([]).should.equal(0);
       });
       it('should throw on 0 in array', () => {
