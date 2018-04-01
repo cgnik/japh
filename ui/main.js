@@ -50,11 +50,12 @@ class Main extends Component {
             </Row>
             <Row>
                <Input s={10} label="Computation Values" icon='file_upload' type='text'
-                      onChange={e => this.handleValues(e.target.value)}/>
+                      onChange={e => this.handleValues(e.target.value)}
+               placeholder="Enter a series of numbers, separated by commas or spaces"/>
             </Row>
             <Row>
                <Button disabled={!valid} onClick={this.runAnalysis.bind(this)}>Run Analysis</Button>
-               {this.state.answer ?(<Chip className="right-align" >Answer: {this.state.answer}</Chip>) : ''}
+               {'answer' in this.state ? (<Chip className="right-align">Answer: {this.state.answer}</Chip>) : ''}
             </Row>
          </div>
       );
