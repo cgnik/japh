@@ -40,8 +40,12 @@ class Main extends Component {
       const valid = this.isValid();
       return (
          <div className="Main">
+            <Row className="Banner">
+               <div className="head">Mathelator</div>
+               <div>Web calculator example application</div>
+            </Row>
             <Row>
-               <Input s={10} type='select' label='Analytical  Operation' icon='file_upload'
+               <Input s={12} type='select' label='Analytical  Operation'
                       onChange={e => this.handleOperation(e.target.value)}>
                   {this.state.analyses.map(a => (
                      <option key={a.id} value={a.id}>{a.name} : {a.description}</option>
@@ -49,13 +53,17 @@ class Main extends Component {
                </Input>
             </Row>
             <Row>
-               <Input s={10} label="Computation Values" icon='file_upload' type='text'
+               <Input s={12} label="Computation Values"  type='text'
                       onChange={e => this.handleValues(e.target.value)}
-               placeholder="Enter a series of numbers, separated by commas or spaces"/>
+                      placeholder="Enter a series of numbers, separated by commas or spaces"/>
             </Row>
-            <Row>
-               <Button disabled={!valid} onClick={this.runAnalysis.bind(this)}>Run Analysis</Button>
-               {'answer' in this.state ? (<Chip className="right-align">Answer: {this.state.answer}</Chip>) : ''}
+            <Row className="controls">
+               <div>
+                  <Button disabled={!valid} onClick={this.runAnalysis.bind(this)}>Run Analysis</Button>
+               </div>
+               <div>               {'answer' in this.state ? (
+                  <Chip className="right-align">Answer: {this.state.answer}</Chip>) : ''}
+               </div>
             </Row>
          </div>
       );
