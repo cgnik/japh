@@ -42,7 +42,7 @@ class Main extends Component {
          <div className="Main">
             <Row className="Banner">
                <div className="head">Mathelator</div>
-               <div>Web calculator example application</div>
+               <div className="subhead">Web calculator example application</div>
             </Row>
             <Row>
                <Input s={12} type='select' label='Analytical  Operation'
