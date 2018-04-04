@@ -24,8 +24,13 @@
   .controls {
     text-align: center;
     margin: auto;
+
     div {
       margin: 8px;
+
+      .chip {
+        background-color: skyblue;
+      }
     }
   }
 }

@@ -18,7 +18,8 @@ app.route('/analysis')
       {id: "add", name: "Add", description: "sum the values"},
       {id: "subtract", name: "Subtract", description: "subtract the values from first to last"},
       {id: "multiply", name: "Multiply", description: "product of the values"},
-      {id: "divide", name: "Divide", description: "quotient of all values, left to right"}
+      {id: "divide", name: "Divide", description: "quotient of all values, left to right"},
+      {id: "average", name: "Average", description: "mean of all values"}
    ]));
 app.route('/analysis/:operation')
    .post((req, resp) => resp.json(analyze(req.params.operation, req.body)));

@@ -62,7 +62,7 @@ class Main extends Component {
                   <Button disabled={!valid} onClick={this.runAnalysis.bind(this)}>Run Analysis</Button>
                </div>
                <div>               {'answer' in this.state ? (
-                  <Chip className="right-align">Answer: {this.state.answer}</Chip>) : ''}
+                  <Chip className="answer">Answer: {this.state.answer}</Chip>) : ''}
                </div>
             </Row>
          </div>
