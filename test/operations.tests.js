@@ -139,4 +139,17 @@ describe('operations', () => {
          expect(ops.divide.bind(null)).to.throw();
       });
    });
+   describe('#average', () => {
+      it('should give an average of the values', () => {
+         ops.average([1.004, 2.000]).should.equal(1.502);
+         ops.average([1.0, 2.0]).should.equal(1.5);
+         ops.average([10, 0.0]).should.equal(5);
+      });
+      it('should throw for non-numeric values', () => {
+         expect(ops.average.bind(['aba', 1])).to.throw();
+         expect(ops.average.bind("jimmy")).to.throw();
+         expect(ops.average.bind()).to.throw();
+         expect(ops.average.bind(null)).to.throw();
+      });
+   });
 });

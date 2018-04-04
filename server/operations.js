@@ -14,12 +14,14 @@ const add = nums => calculate(numbers(nums), (a, b) => a + b);
 const subtract = nums => calculate(numbers(nums), (a, b) => a - b);
 const multiply = nums => roundsig(calculate(numbers(nums), (a, b) => a * b), nums);
 const divide = nums => roundsig(calculate(numbers(nums), (a, b) => a / b), nums);
+const average = nums => add(nums)/nums.length;
 
 module.exports = {
    add: add,
    subtract: subtract,
    multiply: multiply,
    divide: divide,
+   average: average,
    calculate: calculate,
    numbers: numbers,
    verify: verify,
